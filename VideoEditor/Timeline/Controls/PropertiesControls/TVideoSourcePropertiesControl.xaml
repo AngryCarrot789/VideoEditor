@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="VideoEditor.Timeline.Controls.PropertiesControls.TVideoSourcePropertiesControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VideoEditor.Timeline.Controls.PropertiesControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="200">
+    <Grid>
+        <Label Content="Video Source:" HorizontalAlignment="Left" Margin="0,0,0,54"/>
+        <Label Content="{Binding SourceID, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="83,0,0,54"/>
+
+        <Label Content="Visibility" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,20"/>
+        <Label Content="{Binding Visibility, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="54,0,0,20"/>
+        <Slider Value="{Binding Visibility, UpdateSourceTrigger=PropertyChanged}" x:Name="opacitySlider" VerticalAlignment="Bottom" Minimum="0" Maximum="1" SmallChange="0.01" TickFrequency="0.01" LargeChange="0.1"/>
+    </Grid>
+</UserControl>
