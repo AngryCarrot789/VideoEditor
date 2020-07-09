@@ -4,11 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VideoEditor" 
-        xmlns:timelineViews="clr-namespace:VideoEditor.Timeline.Views"
+        xmlns:timelineViews="clr-namespace:VideoEditor.Timeline.Views" xmlns:viewmodels="clr-namespace:VideoEditor.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow"
         Height="750" Width="1280"
         Style="{DynamicResource CustomWindowStyle}">
+    <Window.DataContext>
+        <viewmodels:MainViewModel/>
+    </Window.DataContext>
     <Grid>
         <Menu VerticalAlignment="Top" HorizontalAlignment="Stretch">
             <MenuItem Header="File"/>
@@ -22,15 +25,16 @@
             </Grid>
             <Grid Height="250" VerticalAlignment="Bottom" Background="{DynamicResource ContainerBackground}">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="225"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
                     <timelineViews:ClipSourcePropertiesCollectionControl 
-                        DataContext="{Binding ClipSourceProperties, UpdateSourceTrigger=PropertyChanged}"/>
+                        DataContext="{Binding ClipSourcesProperties, UpdateSourceTrigger=PropertyChanged}"/>
                 </Grid>
                 <Grid Grid.Column="1">
-                    <timelineViews:ClipSourceCollectionControl/>
+                    <timelineViews:ClipSourceCollectionControl
+                        DataContext="{Binding ClipSources, UpdateSourceTrigger=PropertyChanged}"/>
                 </Grid>
             </Grid>
         </Grid>

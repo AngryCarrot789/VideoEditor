@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using VideoEditor.Timeline.Views.ViewModels;
 
 namespace VideoEditor.Timeline.Views
 {
@@ -17,6 +18,12 @@ namespace VideoEditor.Timeline.Views
         public bool IsSelected { get; set; }
         public bool CanDeselect { get; set; }
         #endregion
+
+        public ClipSourceCollectionViewModel TSourceCollection
+        {
+            get => this.DataContext as ClipSourceCollectionViewModel;
+            set => this.DataContext = value;
+        }
 
         public ClipSourceCollectionControl()
         {

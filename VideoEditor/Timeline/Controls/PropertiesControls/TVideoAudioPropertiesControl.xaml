@@ -7,7 +7,9 @@
              mc:Ignorable="d" 
              d:DesignWidth="800">
     <StackPanel>
-        <ListBox ItemsSource="{Binding VideoPropertiesClips}"/>
-        <ListBox ItemsSource="{Binding AudioPropertiesClips}"/>
+        <ListBox HorizontalContentAlignment="Stretch" 
+                 ItemsSource="{Binding VideoPropertiesLayers, UpdateSourceTrigger=PropertyChanged}"/>
+        <ListBox HorizontalContentAlignment="Stretch" 
+                 ItemsSource="{Binding AudioPropertiesLayers, UpdateSourceTrigger=PropertyChanged}"/>
     </StackPanel>
 </UserControl>

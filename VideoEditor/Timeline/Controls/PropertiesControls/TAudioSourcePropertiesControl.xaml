@@ -5,12 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:VideoEditor.Timeline.Controls.PropertiesControls"
              mc:Ignorable="d" 
-             d:DesignHeight="80" d:DesignWidth="200">
+             Height="80" 
+             HorizontalAlignment="Stretch" 
+             HorizontalContentAlignment="Stretch">
     <Grid>
         <Label Content="Audio Source" HorizontalAlignment="Left" Margin="0,0,0,54"/>
 
-        <Label Content="Visibility" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,20"/>
-        <Label Content="{Binding ElementName=opacitySlider, Path=Value}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="54,0,0,20"/>
-        <Slider x:Name="opacitySlider" VerticalAlignment="Bottom" Minimum="0" Maximum="1" SmallChange="0.01" TickFrequency="0.01" Value="0.4" LargeChange="0.1"/>
+        <Label Content="Volume" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,20"/>
+        <Label Content="{Binding AudioVolume, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="54,0,0,20"/>
+        <Slider Value="{Binding AudioVolume, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Minimum="0" Maximum="1" SmallChange="0.01" TickFrequency="0.01" LargeChange="0.1"/>
     </Grid>
 </UserControl>

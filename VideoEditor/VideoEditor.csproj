@@ -76,12 +76,12 @@
     <Compile Include="Timeline\Controls\PropertiesControls\TVideoAudioPropertiesControl.xaml.cs">
       <DependentUpon>TVideoAudioPropertiesControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Timeline\Controls\PropertiesControls\TVideoAudioPropertiesViewModel.cs" />
+    <Compile Include="Timeline\Controls\PropertiesControls\ViewModels\TVideoAudioPropertiesViewModel.cs" />
     <Compile Include="Timeline\Controls\TimelineControls\TVideoAudioControl.xaml.cs">
       <DependentUpon>TVideoAudioControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Timeline\Controls\TimelineControls\TVideoAudioViewModel.cs" />
-    <Compile Include="Timeline\Views\ClipSourcePropertiesCollectionViewModel.cs" />
+    <Compile Include="Timeline\Controls\TimelineControls\ViewModels\TVideoAudioViewModel.cs" />
+    <Compile Include="Timeline\Views\ViewModels\ClipSourcePropertiesCollectionViewModel.cs" />
     <Compile Include="Timeline\Controls\PropertiesControls\TAudioSourcePropertiesControl.xaml.cs">
       <DependentUpon>TAudioSourcePropertiesControl.xaml</DependentUpon>
     </Compile>
@@ -94,13 +94,11 @@
     <Compile Include="Timeline\Controls\TimelineControls\TVideoSourceControl.xaml.cs">
       <DependentUpon>TVideoSourceControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Timeline\Views\ClipSourceCollectionViewModel.cs" />
-    <Compile Include="Timeline\Controls\ViewModels\AudioSourceViewModel.cs" />
-    <Compile Include="Timeline\Controls\PropertiesControls\TAudioSourcePropertiesViewModel.cs" />
-    <Compile Include="Timeline\Controls\TimelineControls\TAudioSourceViewModel.cs" />
-    <Compile Include="Timeline\Controls\PropertiesControls\TVideoSourcePropertiesViewModel.cs" />
-    <Compile Include="Timeline\Controls\TimelineControls\TVideoSourceViewModel.cs" />
-    <Compile Include="Timeline\Controls\ViewModels\VideoSourceViewModel.cs" />
+    <Compile Include="Timeline\Views\ViewModels\ClipSourceCollectionViewModel.cs" />
+    <Compile Include="Timeline\Controls\PropertiesControls\ViewModels\TAudioSourcePropertiesViewModel.cs" />
+    <Compile Include="Timeline\Controls\TimelineControls\ViewModels\TAudioSourceViewModel.cs" />
+    <Compile Include="Timeline\Controls\PropertiesControls\ViewModels\TVideoSourcePropertiesViewModel.cs" />
+    <Compile Include="Timeline\Controls\TimelineControls\ViewModels\TVideoSourceViewModel.cs" />
     <Compile Include="Timeline\Views\ClipSourceCollectionControl.xaml.cs">
       <DependentUpon>ClipSourceCollectionControl.xaml</DependentUpon>
     </Compile>

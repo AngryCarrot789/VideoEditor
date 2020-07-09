@@ -1,28 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows.Controls;
+using VideoEditor.Timeline.Controls.PropertiesControls.ViewModels;
 
 namespace VideoEditor.Timeline.Controls.PropertiesControls
 {
     /// <summary>
-    /// Interaction logic for TAudioSourcePropertiesControl.xaml
+    /// An audio clip
     /// </summary>
     public partial class TAudioSourcePropertiesControl : UserControl
     {
+        public TAudioSourcePropertiesViewModel TAudioProperties
+        {
+            get => this.DataContext as TAudioSourcePropertiesViewModel;
+            set => this.DataContext = value;
+        }
+
         public TAudioSourcePropertiesControl()
         {
             InitializeComponent();
+            TAudioProperties = new TAudioSourcePropertiesViewModel();
         }
     }
 }

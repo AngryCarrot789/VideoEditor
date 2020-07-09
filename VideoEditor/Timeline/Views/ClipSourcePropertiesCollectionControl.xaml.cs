@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VideoEditor.Timeline.Views.ViewModels;
 
 namespace VideoEditor.Timeline.Views
 {
@@ -20,6 +21,12 @@ namespace VideoEditor.Timeline.Views
     /// </summary>
     public partial class ClipSourcePropertiesCollectionControl : UserControl
     {
+        public ClipSourcePropertiesCollectionViewModel TSourcePropertiesCollection
+        {
+            get => this.DataContext as ClipSourcePropertiesCollectionViewModel;
+            set => this.DataContext = value;
+        }
+
         public ClipSourcePropertiesCollectionControl()
         {
             InitializeComponent();

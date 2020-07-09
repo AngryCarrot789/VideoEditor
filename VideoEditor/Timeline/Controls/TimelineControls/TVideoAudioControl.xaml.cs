@@ -1,28 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows.Controls;
+using VideoEditor.Timeline.Controls.TimelineControls.ViewModels;
 
 namespace VideoEditor.Timeline.Controls.TimelineControls
 {
     /// <summary>
-    /// Interaction logic for TVideoAudioControl.xaml
+    /// A layer containing 2 collections of 
+    /// <see cref="TVideoSourceControl"/>s and
+    /// <see cref="TAudioSourceControl"/>
     /// </summary>
     public partial class TVideoAudioControl : UserControl
     {
+        public TVideoAudioViewModel TVideoAudio
+        {
+            get => this.DataContext as TVideoAudioViewModel;
+            set => this.DataContext = value;
+        }
+
         public TVideoAudioControl()
         {
             InitializeComponent();
+            TVideoAudio = new TVideoAudioViewModel();
         }
     }
 }

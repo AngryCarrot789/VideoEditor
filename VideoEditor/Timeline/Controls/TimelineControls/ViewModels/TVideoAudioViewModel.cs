@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 using System.Security.Permissions;
-using System.Text;
-using System.Threading.Tasks;
 using VideoEditor.Utilities;
 
-namespace VideoEditor.Timeline.Controls.TimelineControls
+namespace VideoEditor.Timeline.Controls.TimelineControls.ViewModels
 {
     public class TVideoAudioViewModel : BaseViewModel
     {
@@ -18,6 +13,16 @@ namespace VideoEditor.Timeline.Controls.TimelineControls
         {
             VideoLayers = new ObservableCollection<TVideoSourceControl>();
             AudioLayers = new ObservableCollection<TAudioSourceControl>();
+        }
+
+        public void AddVideoLayer(TVideoSourceControl vidSrc)
+        {
+            VideoLayers.Add(vidSrc);
+        }
+
+        public void AddAudioLayer(TAudioSourceControl vidSrc)
+        {
+            AudioLayers.Add(vidSrc);
         }
     }
 }
